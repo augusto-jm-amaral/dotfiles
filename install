@@ -1,0 +1,11 @@
+#!/bin/bash
+
+rm ~/.gitconfig
+cp ./git/.gitconfig ~/
+
+# rm -rf ~/.vim
+git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
+rm ~/.vimrc
+cp ./vim/.vimrc ~/.vimrc
+
+vim +PluginInstall +qall
